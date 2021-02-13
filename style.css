@@ -19,6 +19,21 @@ button {
   padding: 5px 15px;
 }
 
+select {
+  width: 200px;
+  padding: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  background-color: #a7c5e3;
+}
+
+select:focus,
+button:focus {
+  outline: 0;
+}
+
 .settings-btn {
   position: absolute;
   bottom: 30px;
@@ -32,9 +47,14 @@ button {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   height: 70px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
+}
+
+.setting.hide {
+  transform: translateY(-100%);
 }
