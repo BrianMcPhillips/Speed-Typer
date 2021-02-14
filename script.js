@@ -41,4 +41,21 @@ function addWordToDom() {
   word.innerHTML = randomWord;
 }
 
+// Update score in DOM
+function updateScore() {
+  score++;
+  scoreEl.innerHTML = score;
+}
+
 addWordToDom();
+
+// Event listeners
+text.addEventListener('input', e => {
+  const insertedText = e.target.value;
+  
+  if(insertedText === randomWord) {
+    addWordToDom();
+    updateScore();
+    e.target.value = '';
+  }
+})
