@@ -34,3 +34,11 @@ let time = 10;
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }
+
+// Add word to DOM
+function addWordToDom() {
+  randomWord = getRandomWord();
+  word.innerHTML = randomWord;
+}
+
+addWordToDom();
